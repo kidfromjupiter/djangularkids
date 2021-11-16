@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'chordsapp.urls'
+ROOT_URLCONF = 'chords_config.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'chordsapp.wsgi.application'
+WSGI_APPLICATION = 'chords_config.wsgi.application'
 
 
 # Database
