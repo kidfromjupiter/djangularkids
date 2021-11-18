@@ -1,1 +1,18 @@
-<p>song-list works!</p>
+<div class="container-own" style="text-align: center;">
+    <h1>List of songs:</h1>
+    <table cellspacing="0" style="margin:auto;">
+        <thead>
+            <tr class="table-head-row">
+                <th class="table-head-data">Artist</th>
+                <th class="table-head-data">Song Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-row" *ngFor="let song of songs">
+                <td class="table-data">{{ song.artist}}</td>
+                <td class="table-data">{{ song.name }}</td>
+            </tr>
+        
+        </tbody>
+    </table>
+</div>

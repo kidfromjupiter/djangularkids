@@ -1,0 +1,29 @@
+:host {
+    height:100%;
+}
+
+.container-own {
+    text-align: center;
+    height:100%;
+}
+
+.table-head-row {
+    background-color: rgb(58, 176, 255);
+    color:white;
+    
+}
+
+.table-head-data {
+    padding-top: 7px;
+    padding-bottom:7px;
+    width:250px;
+}
+
+.table-row {
+
+}
+
+.table-data {
+    padding-top: 7px;
+    padding-bottom:7px;
+}

@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./song-list.component.css']
 })
 export class SongListComponent implements OnInit {
-
+  songs: [{artist:string, name: string}] = [
+    {artist: "Paul McCartney", name: "Yesterday"}
+  ];
   constructor() { }
 
   ngOnInit(): void {

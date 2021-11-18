@@ -9,6 +9,7 @@
 
 .logo-text {
     color:rgb(58, 176, 255);
+    cursor: pointer;
 }
 
 .menu-list {
