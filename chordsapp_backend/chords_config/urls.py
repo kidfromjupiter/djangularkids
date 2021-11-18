@@ -20,4 +20,5 @@ import chordsapp.views as chordsapp_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', chordsapp_views.home, name='home'),
+    path('songs/', chordsapp_views.SongView.as_view(), name='songs_list'),
 ]
