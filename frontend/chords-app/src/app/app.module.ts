@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { TestComponent } from './test/test.component';
 import { SecondComponent } from './second/second.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     SecondComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
