@@ -7,6 +7,8 @@ import { TestComponent } from './test/test.component';
 import { SecondComponent } from './second/second.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { SongListComponent } from './song-list/song-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     TestComponent,
     SecondComponent,
     PageNotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent,
+    SongListComponent
   ],
   imports: [
     BrowserModule,
