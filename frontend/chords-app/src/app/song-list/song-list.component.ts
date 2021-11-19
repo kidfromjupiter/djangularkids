@@ -14,7 +14,7 @@ export class SongListComponent implements OnInit {
   constructor(private songService: apiHttpService) { }
 
   ngOnInit(): void {
-    this.songService.getSongs().subscribe((data)=>{
+    this.songService.getData<Song[]>().subscribe((data: Song[])=>{
       this.songs = data;
     })
   }

@@ -13,7 +13,7 @@ export class apiHttpService {
 
    }
 
-   getSongs(){
-     return this.http.get<Song[]>(this.url);
+   getData<T>(){
+     return this.http.get<T>(this.url);
    }
 }
