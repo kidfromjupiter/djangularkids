@@ -4,3 +4,13 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+.main-area-container {
+    display:flex;
+    height:100%;
+}
+
+.main-area-1,
+.main-area-2 {
+    width:50%;
+}
