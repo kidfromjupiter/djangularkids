@@ -8,7 +8,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="table-row" *ngFor="let song of songs">
+            <tr class="table-row" *ngFor="let song of songs" (click)="onSongSelected(song)">
                 <td class="table-data">{{ song.artist}}</td>
                 <td class="table-data">{{ song.title }}</td>
             </tr>

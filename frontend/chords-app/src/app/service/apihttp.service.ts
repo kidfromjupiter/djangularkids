@@ -7,7 +7,7 @@ import { Song } from '../shared/song.model';
 @Injectable({
   providedIn: 'root'
 })
-export class apiHttpService {
+export class ApiHttpService {
   url = "http://127.0.0.1:8000/songs";
   constructor(private http: HttpClient) {
 

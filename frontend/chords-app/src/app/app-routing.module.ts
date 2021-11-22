@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:"", component:WelcomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'songlist', component: SongListComponent},
-  {path: 'songlist/overview', component: SongOverviewComponent, outlet:"outlet2"},
+  {path: 'songlist', component: SongOverviewComponent, outlet:"outlet2"},
   {path: '**', component: PageNotFoundComponent}
 ];
 

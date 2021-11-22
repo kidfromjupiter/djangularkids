@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { apiHttpService } from '../service/apihttp.service';
+import { ApiHttpService } from '../service/apihttp.service';
+import { SongsService } from '../service/songs.service';
 import { Song } from '../shared/song.model';
 
 @Component({
@@ -9,14 +10,19 @@ import { Song } from '../shared/song.model';
 })
 export class SongListComponent implements OnInit {
   songs: Song[] = [
-    {id: "1", artist: "Paul McCartney", title: "Yesterday", lyrics: "bla", date_of_creation:"12"}
+    {id: "1", artist: "Paul McCartney", title: "Yesterday", lyrics: "bla", date_of_creation:"12"},
+    {id: "2141", artist: "The Beatles", title: "All my loving", lyrics: "Lorem ipsum", date_of_creation:"15.7.1985"}
   ];
-  constructor(private songService: apiHttpService) { }
+  constructor(private apiHttpService: ApiHttpService, private songsService: SongsService) { }
 
   ngOnInit(): void {
-    this.songService.getData<Song[]>().subscribe((data: Song[])=>{
+    this.apiHttpService.getData<Song[]>().subscribe((data: Song[])=>{
       this.songs = data;
     })
+  }
+
+  onSongSelected(song: Song){
+    this.songsService.songSelected.emit(song);
   }
 
 }
