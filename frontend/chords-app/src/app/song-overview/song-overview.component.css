@@ -1,0 +1,29 @@
+:host {
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-overview-container {
+    border: 2px solid rgb(58, 176, 255);
+    border-radius: 15px;
+    width: 50%;
+    text-align: center;
+    margin:auto;
+    height:70%;
+    padding:10px;
+}
+
+.song-overview-title {
+    font-size:25px;
+}
+
+.song-overview-artist {
+    font-size:21px;
+}
+
+.song-overview-lyrics {
+
+}

@@ -1,7 +1,7 @@
-<div *ngIf="this.song">
-    <img class="song-img" src="" alt="">
-    <h4 class="song-title">{{ this.song.title}}</h4>
-    <h5 class="artist">{{ this.song.artist }}</h5>
-    <p class="song-overview">{{ this.song.lyrics }}</p>
+<div class="song-overview-container" *ngIf="this.song">
+    <img class="song-overview-img" src="" alt="">
+    <h4 class="song-overview-title">{{ this.song.title}}</h4>
+    <h5 class="song-overview-artist">{{ this.song.artist }}</h5>
+    <p class="song-overview-lyrics">{{ this.song.lyrics }}</p>
 </div>
 <h3 *ngIf="!this.song">Please select a song</h3>
