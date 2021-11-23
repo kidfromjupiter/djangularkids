@@ -4,7 +4,7 @@
     <h5 class="song-overview-artist">{{ this.song.artist }}</h5>
     <p class="song-overview-lyrics">{{ this.song.lyrics }}</p>
     <div class="song-overview-btn-container">
-        <button>Edit Song</button>
+        <button [routerLink]='["song", "edit", song.id ]'>Edit Song</button>
         <button>Delete Song</button>
     </div>
 </div>

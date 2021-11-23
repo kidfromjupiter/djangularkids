@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { SongListComponent } from './song-list/song-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SongOverviewComponent } from './song-overview/song-overview.component';
+import { SongEditComponent } from './song-edit/song-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SongOverviewComponent } from './song-overview/song-overview.component';
     AboutComponent,
     SongListComponent,
     WelcomeComponent,
-    SongOverviewComponent
+    SongOverviewComponent,
+    SongEditComponent
   ],
   imports: [
     BrowserModule,
