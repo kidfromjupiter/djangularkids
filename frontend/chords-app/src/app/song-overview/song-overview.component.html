@@ -3,5 +3,9 @@
     <h4 class="song-overview-title">{{ this.song.title}}</h4>
     <h5 class="song-overview-artist">{{ this.song.artist }}</h5>
     <p class="song-overview-lyrics">{{ this.song.lyrics }}</p>
+    <div class="song-overview-btn-container">
+        <button>Edit Song</button>
+        <button>Delete Song</button>
+    </div>
 </div>
 <h3 *ngIf="!this.song">Please select a song</h3>
