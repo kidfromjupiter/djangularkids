@@ -15,3 +15,15 @@ class SongView(TemplateView):
         songlist = Song.objects.all()
         serialize = SongSerializer(songlist, many=True)
         return JsonResponse(serialize.data, safe=False)
+
+class DelSongView(TemplateView):
+    def get(self, request,*args, **kwargs):
+        try:
+            song = Song.objects.get(id=kwargs['song'])
+            song.delete()
+            songlist = Song.objects.all()
+            serialize = SongSerializer(songlist, many=True)
+            serialize = serialize.update({'status': 'success'})
+            return JsonResponse(serialize.data, safe=False)
+        except Song.DoesNotExist:
+            return JsonResponse({'status': 'Error. Requested song does not exist.'})

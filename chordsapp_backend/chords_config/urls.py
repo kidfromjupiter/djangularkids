@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', chordsapp_views.home, name='home'),
     path('songs/', chordsapp_views.SongView.as_view(), name='songs_list'),
+    path('songs/d/<uuid:song>/', chordsapp_views.DelSongView.as_view(), name='del_song'),
 ]
