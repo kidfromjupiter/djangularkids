@@ -2,7 +2,7 @@
     <img class="song-overview-img" src="" alt="">
     <h4 class="song-overview-title">{{ this.song.title}}</h4>
     <h5 class="song-overview-artist">{{ this.song.artist }}</h5>
-    <p class="song-overview-lyrics">{{ this.song.date_of_creation }}</p>
+    <p class="song-overview-lyrics">{{ lyrics_overview }}</p>
     <div class="song-overview-btn-container">
         <button [routerLink]='["song", "edit", song.id ]'>Edit Song</button>
         <button>Delete Song</button>

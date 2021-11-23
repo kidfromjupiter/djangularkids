@@ -25,7 +25,12 @@ table {
 }
 
 .table-row {
+    transition: .2s all;
+}
 
+.table-row:hover {
+    background-color: rgb(236, 236, 236);
+    transition: .2s all;
 }
 
 .table-data {

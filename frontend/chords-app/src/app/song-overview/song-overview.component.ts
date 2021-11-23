@@ -9,10 +9,13 @@ import { Song } from '../shared/song.model';
 })
 export class SongOverviewComponent implements OnInit {
   song?: Song;
+  lyrics_overview: string = "";
   constructor(private songsService: SongsService) { 
     this.songsService.songSelected.subscribe((data: Song)=>{
       this.song = {id: data.id, artist: data.artist, title: data.title, lyrics: data.lyrics, date_of_creation: data.date_of_creation}
+      this.lyrics_overview = data.lyrics.substr(0, 200) + "...";
     });
+
   }
 
   ngOnInit(): void {
