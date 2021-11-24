@@ -42,6 +42,7 @@
     border-radius: 15px;
     cursor:pointer;
     transition: 0.4s all;
+    font-size:14px;
 }
 
 .song-overview-btn-container button:hover {
