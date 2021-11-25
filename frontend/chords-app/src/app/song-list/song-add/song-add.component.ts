@@ -21,8 +21,9 @@ export class SongAddComponent implements OnInit {
   }
 
   addSong(form: NgForm){
-    this.apiHttpService.addData(form.value).subscribe((data)=>{
-      console.log(data);
+    this.apiHttpService.addData(form.value).subscribe((data: any)=>{
+      this.songAdded.emit(data);
+      this.modalCanceled.emit(false);
     });
   }
 

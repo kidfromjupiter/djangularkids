@@ -7,5 +7,6 @@ import { Song } from '../shared/song.model';
 })
 export class SongsService {
   songSelected = new EventEmitter<Song>();
+  songDeleted = new EventEmitter<boolean>();
   constructor() { }
 }
