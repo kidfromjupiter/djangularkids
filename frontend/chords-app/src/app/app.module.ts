@@ -11,6 +11,7 @@ import { SongListComponent } from './song-list/song-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SongOverviewComponent } from './song-overview/song-overview.component';
 import { SongEditComponent } from './song-edit/song-edit.component';
+import { SongAddComponent } from './song-list/song-add/song-add.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SongEditComponent } from './song-edit/song-edit.component';
     SongListComponent,
     WelcomeComponent,
     SongOverviewComponent,
-    SongEditComponent
+    SongEditComponent,
+    SongAddComponent
   ],
   imports: [
     BrowserModule,

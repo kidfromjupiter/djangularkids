@@ -41,11 +41,11 @@
     padding:7px;
     border-radius: 15px;
     cursor:pointer;
-    transition: 0.4s all;
+    transition: 0.2s all;
     font-size:14px;
 }
 
 .song-overview-btn-container button:hover {
-    transition: 0.4s all;
-    transform:scale(1.04);
+    transition: 0.2s all;
+    transform:scale(1.02);
 }

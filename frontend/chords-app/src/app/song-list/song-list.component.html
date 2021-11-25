@@ -1,7 +1,7 @@
 <div class="container-own" style="text-align: center">
   <div class="heading-container">
     <h1>Your Songs</h1>
-    <div class="svg-container">
+    <div (click)="addOn = true" class="svg-container">
       <svg
         version="1.1"
         id="Capa_1"
@@ -43,4 +43,7 @@
       </tr>
     </tbody>
   </table>
+  <div class="add-song-overlay" *ngIf="addOn">
+        <app-song-add (modalCanceled)="addOn = $event"></app-song-add>
+  </div>
 </div>
