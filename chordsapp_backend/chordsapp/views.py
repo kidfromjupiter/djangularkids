@@ -42,12 +42,16 @@ class DelSongView(TemplateView):
 @csrf_exempt
 def AddSongView(request):
     if request.method == 'POST':
-        title = request.POST['title']
-        lyrics = request.POST['lyrics']
-        artist = request.POST['artist']
-
-        if title and lyrics and artist:
-            song = Song(title=title, lyrics=lyrics, artist=artist)
-            song.save()
-            songlist = getSongList()
-            return JsonResponse(songlist, safe=False)
+        try:
+            print(request.POST)
+            title = request.POST['title']
+            lyrics = request.POST['lyrics']
+            artist = request.POST['artist']
+    
+            if title and lyrics and artist:
+                song = Song(title=title, lyrics=lyrics, artist=artist)
+                song.save()
+                songlist = getSongList()
+                return JsonResponse(songlist, safe=False)
+        except:
+            return JsonResponse({'status': 'Error. Something when wrong. Try again later'})
