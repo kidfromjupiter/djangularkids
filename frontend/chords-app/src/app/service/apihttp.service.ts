@@ -20,4 +20,8 @@ export class ApiHttpService {
    deleteData(songId: string){
      return this.http.delete(this.url + "/songs/d/" + songId);
    }
+
+   addData(params: {title: string, artist: string}){
+     return this.http.post(this.url + "/songs", "test", {params:{title: params.title, artist: params.artist, lyrics: "You haven't entered any lyrics yet."}});
+   }
 }

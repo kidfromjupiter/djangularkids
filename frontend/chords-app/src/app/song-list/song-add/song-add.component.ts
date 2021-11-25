@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ApiHttpService } from 'src/app/service/apihttp.service';
 
 @Component({
   selector: 'app-song-add',
@@ -7,13 +9,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SongAddComponent implements OnInit {
   @Output() modalCanceled = new EventEmitter<boolean>();
-  constructor() { }
+  constructor(private apiHttpService: ApiHttpService) { }
 
   ngOnInit(): void {
   }
 
   onModalCanceled(){
     this.modalCanceled.emit(false);
+  }
+
+  addSong(form: NgForm){
+    this.apiHttpService.addData(form.value).subscribe();
   }
 
 }

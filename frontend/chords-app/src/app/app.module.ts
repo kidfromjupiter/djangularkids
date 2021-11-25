@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { SongOverviewComponent } from './song-overview/song-overview.component';
 import { SongEditComponent } from './song-edit/song-edit.component';
 import { SongAddComponent } from './song-list/song-add/song-add.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SongAddComponent } from './song-list/song-add/song-add.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

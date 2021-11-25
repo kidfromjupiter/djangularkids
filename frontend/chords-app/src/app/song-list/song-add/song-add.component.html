@@ -1,10 +1,10 @@
 <div class="song-add-container">
-    <form action="">
-        <label for="song_name">Song title:</label>
-        <input type="text" id="song_name" name="song_name" placeholder="Enter title of the song">
+    <form #addSongForm="ngForm" (ngSubmit)="addSong(addSongForm)" action="">
+        <label for="title">Song title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter title of the song" ngModel>
 
         <label for="artist">Artist name:</label>
-        <input type="text" id="artist" name="artist" placeholder="Enter name of the artist">
+        <input type="text" id="artist" name="artist" placeholder="Enter name of the artist" ngModel>
         <div class="input-buttons-container">
             <button class="input-btn input-btn-add" type="submit">Add song</button>
             <button (click)="onModalCanceled()" class="input-btn input-btn-cancel" type="button">Cancel</button>
