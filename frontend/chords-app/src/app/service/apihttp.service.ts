@@ -8,12 +8,16 @@ import { Song } from '../shared/song.model';
   providedIn: 'root'
 })
 export class ApiHttpService {
-  url = "http://127.0.0.1:8000/songs";
+  url = "http://127.0.0.1:8000";
   constructor(private http: HttpClient) {
 
    }
 
    getData<T>(){
-     return this.http.get<T>(this.url);
+     return this.http.get<T>(this.url + "/songs");
+   }
+
+   deleteData(songId: string){
+     return this.http.delete(this.url + "/songs/d/" + songId);
    }
 }

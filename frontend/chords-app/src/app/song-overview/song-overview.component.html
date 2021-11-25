@@ -5,7 +5,7 @@
     <p class="song-overview-lyrics">{{ lyrics_overview }}</p>
     <div class="song-overview-btn-container">
         <button [routerLink]='["song", "edit", song.id ]'>Edit Song</button>
-        <button>Delete Song</button>
+        <button (click)="deleteSong(song.id)">Delete Song</button>
     </div>
 </div>
 <h3 *ngIf="!this.song">Please select a song</h3>
