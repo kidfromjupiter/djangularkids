@@ -26,6 +26,7 @@ class SongView(TemplateView):
         serialize = SongSerializer(songlist, many=True)
         return JsonResponse(serialize.data, safe=False)
 
+@method_decorator(csrf_exempt,name='dispatch')
 class DelSongView(TemplateView):
     def post(self, request,*args, **kwargs):
         try:
