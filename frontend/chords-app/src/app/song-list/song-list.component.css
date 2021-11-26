@@ -7,6 +7,46 @@
     height:100%;
 }
 
+/* ------------------------------------------------------------------ */
+/* HEADING */
+/* ------------------------------------------------------------------ */
+
+.heading-container {
+    width:70%;
+    margin:auto;
+    padding:5px 5px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.heading-container h1 {
+    font-size:25px;
+    color:rgb(58, 176, 255);
+    display:inline-block;
+
+}
+
+.svg-container {
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+    transform: rotate(0deg);
+    transform-origin: center;
+    transition: .3s all;
+}
+
+.svg-container:hover {
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: .3s all;
+}
+
+.svg-plus-sign {
+    fill:rgb(58, 176, 255);
+}
+/* ------------------------------------------------------------------ */
+/* TABLE */
+/* ------------------------------------------------------------------ */
 table {
     width:70%;
 }
@@ -25,7 +65,12 @@ table {
 }
 
 .table-row {
+    transition: .2s all;
+}
 
+.table-row:hover {
+    background-color: rgb(236, 236, 236);
+    transition: .2s all;
 }
 
 .table-data {
@@ -34,3 +79,21 @@ table {
     font-size: 14px;
     cursor: pointer;
 }
+
+/* ------------------------------------------------------------------ */
+/* ADD SONG */
+/* ------------------------------------------------------------------ */
+
+.add-song-overlay {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: transparent;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
