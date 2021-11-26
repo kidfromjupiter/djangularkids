@@ -21,13 +21,13 @@ def getSongList():
 
 
 class SongView(TemplateView):
-    def get(self, request):
+    def post(self, request):
         songlist = Song.objects.all()
         serialize = SongSerializer(songlist, many=True)
         return JsonResponse(serialize.data, safe=False)
 
 class DelSongView(TemplateView):
-    def get(self, request,*args, **kwargs):
+    def post(self, request,*args, **kwargs):
         try:
             song = Song.objects.get(id=kwargs['song'])
             song.delete()
