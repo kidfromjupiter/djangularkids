@@ -21,7 +21,7 @@ def getSongList():
 
 
 class SongView(TemplateView):
-    def post(self, request):
+    def get(self, request):
         songlist = Song.objects.all()
         serialize = SongSerializer(songlist, many=True)
         return JsonResponse(serialize.data, safe=False)
