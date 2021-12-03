@@ -56,3 +56,6 @@ def AddSongView(request):
                 return JsonResponse(songlist, safe=False)
         except:
             return JsonResponse({'status': 'Error. Something when wrong. Try again later'})
+
+def testPage(request):
+    return render(request, 'test.html')
